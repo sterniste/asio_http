@@ -7,6 +7,6 @@ if [ -n "${CMAKE_C_COMPILER+set}" ]; then
   echo -DCMAKE_C_COMPILER=$CMAKE_C_COMPILER \\
 fi
 echo "\
--DBOOST_INCLUDE_DIR=$PWD/ext/prefix_linux-x64/include \
--DBOOST_LIB_DIR=$PWD/ext/prefix_linux-x64/lib" \\
+-DBOOST_INCLUDE_DIR=$PWD/ext/prefix_w64-mingw32/include \
+-DBOOST_LIB_DIR=$PWD/ext/prefix_w64-mingw32/lib" \\
 echo $*

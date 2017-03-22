@@ -35,8 +35,8 @@ const char* const http_response::content_type_key = "Content-Type";
 
 string
 http_response::str() const {
-  ostringstream oss{"HTTP/1.1 "};
-  oss << status_code_str(status_code) << '\r' << '\n';
+  ostringstream oss;
+  oss << "HTTP/1.1 " << status_code_str(status_code) << '\r' << '\n';
   for (const auto& header : headers)
     oss << header.first << ": " << header.second << '\r' << '\n';
   if (!content.empty())
